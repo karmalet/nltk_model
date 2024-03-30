@@ -299,7 +299,7 @@ class NgramModel(ModelI):
             one=self._generate_one(text)
             text.append(one)
             if one=='</s>' or i==num_words-1:
-                if self._lpad is not ():
+                if self._lpad != ():
                     res.append(list(self._lpad)[:(len(self._lpad)+len(context))-(self._n-2)]+text)
                 else:
                     res.append(text)
