@@ -105,7 +105,7 @@ class NgramModel(ModelI):
         delta = 1+self._padLen-n        # len(sent)+delta == ngrams in sent
 
         if estimator is None:
-            assert (estimator_args is ()) and (estimator_kwargs=={}),\
+            assert (estimator_args == ()) and (estimator_kwargs=={}),\
                    "estimator_args (%s) or _kwargs supplied (%s), but no estimator"%(estimator_args,estimator_kwargs)
             estimator = lambda fdist, bins: MLEProbDist(fdist)
 
