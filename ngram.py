@@ -45,7 +45,6 @@ def _estimator(fdist, bins):
     res.check()
     return res
 
-@compat.python_2_unicode_compatible
 class NgramModel(ModelI):
     """
     A processing interface for assigning a probability to the next word.
